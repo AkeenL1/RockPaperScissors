@@ -1,5 +1,6 @@
 let cpuScore = 0;
 let playerScore = 0;
+const state = document.querySelector("#winOrLose");
 function computerPlay()
 {
 	let x = Math.floor(Math.random()*3) + 1;
@@ -24,14 +25,14 @@ function round(playerSelection, computerSelection)
 		switch(playerSelection.toLowerCase())
 		{
 			case "rock":
-				console.log("It's a tie");
+				state.textContent= "It's a tie!";
 				break;
 			case "paper":
-				console.log("You Win!");
+				state.textContent = "You Win!";
 				playerScore++;
 				break;
 			case "scissors":
-				console.log("You lose!");
+				state.textContent = "You Lose!";
 				cpuScore++;
 				break;
 			default:
@@ -43,14 +44,14 @@ function round(playerSelection, computerSelection)
 		switch(playerSelection.toLowerCase())
 		{
 			case "paper":
-				console.log("It's a tie");
+				state.textContent= "It's a tie!";
 				break;
 			case "scissors":
-				console.log("You Win!");
+				state.textContent = "You Win!"
 				playerScore++;
 				break;
 			case "rock":
-				console.log("You lose!");
+				state.textContent = "You Lose!";
 				cpuScore++;
 				break;
 			default:
@@ -62,14 +63,14 @@ function round(playerSelection, computerSelection)
 		switch(playerSelection.toLowerCase())
 		{
 			case "scissors":
-				console.log("It's a tie");
+				state.textContent= "It's a tie!";
 				break;
 			case "rock":
-				console.log("You Win!");
+				state.textContent = "You Win!";
 				playerScore++;
 				break;
 			case "paper":
-				console.log("You lose!");
+				state.textContent = "You Lose!";
 				cpuScore++;
 				break;
 			default:
