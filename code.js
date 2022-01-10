@@ -97,15 +97,23 @@ paperBtn.addEventListener('click',() =>
 
 const pScore = document.querySelector("#playerScore");
 const cScore = document.querySelector("#cpuScore");
+const globBtn = document.querySelectorAll('button');
+globBtn.forEach((globBtn) => {
+	globBtn.addEventListener('click',() =>	
+	{
+		pScore.textContent = playerScore.toString();
+		cScore.textContent = cpuScore.toString();
+		if(playerScore>=5)
+		{
+			alert("You WIN!!");
+		}
 
-pScore.textContent = playerScore;
-cScore.textContent = cpuScore;
-if(playerScore>=5)
-{
-	alert("You WIN!!");
-}
+		if(cpuScore>=5)
+		{
+			alert("You Lose!");
+		}
+		return;
+	});
+});
+	
 
-if(cpuScore>=5)
-{
-	alert("You Lose!");
-}
