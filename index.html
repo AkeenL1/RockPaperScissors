@@ -9,8 +9,91 @@
 	<script type="text/javascript">
 		function computerPlay()
 		{
-			console.log("rock");
+			let x = Math.floor(Math.random()*3) + 1;
+			switch (x)
+			{
+				case 1:
+					return "rock";
+					break;
+				case 2:
+					return "scissors";
+					break;
+				default:
+					return "paper";
+					break;
+			}
 		}
+		function round(playerSelection, computerSelection)
+		{
+			
+			if(computerSelection.toLowerCase() == "rock")
+			{
+				switch(playerSelection.toLowerCase())
+				{
+					case "rock":
+						console.log("It's a tie");
+						break;
+					case "paper":
+						console.log("You Win!");
+						break;
+					case "scissors":
+						console.log("You lose!");
+						break;
+					default:
+						break;
+				}
+			}
+			else if(computerSelection.toLowerCase() == "paper")
+			{
+				switch(playerSelection.toLowerCase())
+				{
+					case "paper":
+						console.log("It's a tie");
+						break;
+					case "scissors":
+						console.log("You Win!");
+						break;
+					case "rock":
+						console.log("You lose!");
+						break;
+					default:
+						break;
+				}
+			}
+			else
+			{
+				switch(playerSelection.toLowerCase())
+				{
+					case "scissors":
+						console.log("It's a tie");
+						break;
+					case "rock":
+						console.log("You Win!");
+						break;
+					case "paper":
+						console.log("You lose!");
+						break;
+					default:
+						break;
+				}
+			}
+		}
+		function game()
+		{
+			for(let i = 0;i<5;++i)
+			{
+				let input = prompt("Rock, Paper, or Scissors?").toLowerCase();
+				if(!(input=="rock"||input =="paper"||input=="scissors"))
+				{
+					console.log("incorrect input");
+				}
+				else
+				{
+					round(input,computerPlay());
+				}
+			}
+		}
+		game();
 	</script>
 </body>
 </html>
