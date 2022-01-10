@@ -82,9 +82,18 @@ const rockBtn = document.querySelector("#rock");
 const paperBtn = document.querySelector("#paper");
 const scissorsBtn = document.querySelector("#scissors");
 
-rockBtn.addEventListener('click',round("rock",computerPlay()));
-scissorsBtn.addEventListener('click',round("paper",computerPlay()));
-paperBtn.addEventListener('click',round("scissors",computerPlay()));
+rockBtn.addEventListener('click',() =>
+	{
+		round("rock",computerPlay());
+	});
+scissorsBtn.addEventListener('click',() =>
+	{
+		round("paper",computerPlay());
+	});
+paperBtn.addEventListener('click',() =>
+	{
+		round("scissors",computerPlay());
+	});
 
 const pScore = document.querySelector("#playerScore");
 const cScore = document.querySelector("#cpuScore");
